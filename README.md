@@ -4,3 +4,10 @@
  ## Tarefas
  O controle dessas tarefas será realizada no GitHub.
 
+
+## Icones
+
+ :package: Nova funcionalidade
+ :up: atualização
+ :beatle: Correção de bug
+ :checkered_flag:Release
