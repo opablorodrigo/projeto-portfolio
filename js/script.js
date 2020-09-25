@@ -1,3 +1,2 @@
-var menu-hamburguer = document.querySelector(".menu-hamburguer");
-
-menu-hamburguer.addEventListener("click", function) 
+document.querySelector(".menuhamburguer").addEventListener("click", () =>
+    document.querySelector(".container").classList.toggle("showmenu"));

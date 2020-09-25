@@ -17,7 +17,7 @@
 }
 
 
-.menu-hamburguer{
+.menuhamburguer{
     /*background-color:red;*/
     width: 2rem;
     height: 2rem;
@@ -31,11 +31,60 @@
     cursor: pointer;
 }
 
-#linha{
+.showmenu .menuhamburguer{
+    right: 16rem;
+}
+
+.linha{
     width: 100%;
     background-color: #fff;
     height: .1rem;
     box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
+}
+
+.showmenu #linha1{
+    transform: rotate(45deg) translate(.3rem, .4rem);
+
+}
+
+.showmenu #linha2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.showmenu #linha3{
+    transform: rotate(-45deg) translate(.3rem, -.45rem);
+}
+
+.menuhamburguer span{
+    position: absolute;
+    left: 3rem;
+    background-color: cornflowerblue;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.menuhamburguer span::before{
+    content: "";
+    position: absolute;
+    border-right: .5rem solid cornflowerblue;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+    opacity: 1;
+}
+
+
+.showmenu .menuhamburguer:hover span{
+    opacity: 1;
 }
 
 
@@ -142,8 +191,12 @@ background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, F
     background-color: #fff;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -20rem;
+    transition: all 1s;
+}
 
+.showmenu .sidebar {
+    right: 0;
 }
 
 
