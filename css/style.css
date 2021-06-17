@@ -165,6 +165,7 @@
     outline: none;
     animation: moveBanner 4s forwards;
     opacity: 0;
+    cursor: pointer;
 }
 
 .banner button:hover{
@@ -193,6 +194,7 @@ background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, F
     top: 0;
     right: -20rem;
     transition: all 1s;
+    z-index: 99;
 }
 
 .showmenu .sidebar {
@@ -298,6 +300,7 @@ background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, F
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f5f5f5;
 }
 
 .sessao-header h1{
@@ -340,4 +343,104 @@ background: linear-gradient(to right, #480048, #C04848); /* W3C, IE 10+/ Edge, F
 .conhecimentos-img-wrapper img{
     object-fit: cover;
     width: 100%;
+}
+
+
+
+.sessao-projetos h1{
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    color: #4b4b4b;
+    border-bottom: solid 3px steelblue;
+    margin-bottom: 1.5rem;
+    
+}
+
+
+.projetos{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #f5f5f5;
+}
+
+.card{
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+}
+
+.card-img-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    border-radius: .5rem;
+}
+
+.card-img-wrapper img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img-wrapper img{
+    opacity: .5;
+}
+
+.card-info{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    padding: 2rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .6);
+    transition: all .3s;
+}
+
+.card-info h2{
+    font-family: var(--font-primary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+
+}
+
+
+.card-info h3{
+    font-family: var(--font-secundary);
+    font-weight: bolder;
+    color: #ff4081;
+    margin-bottom: 1.5rem;
+}
+
+.card-info p{
+    font-family: var(--font-secundary);
+    color: #eee;
+    width: 80%;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+    background: #6a3093;
+    background: -webkit-linear-gradient(to right, #a044ff, #6a3093);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #a044ff, #6a3093); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: var(--font-action);
+    font-size: .8rem;
+    color: #eee;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
 }
